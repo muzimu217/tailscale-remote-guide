@@ -2,7 +2,10 @@
 
 ## 概述
 
-本指南介绍如何使用 Tailscale 进行安全的远程服务器管理，适用于无 SSH 权限或需要绕过防火墙的场景。
+本指南介绍两种基于 Tailscale 的远程服务器管理方案：
+
+- **方案一：SSH 免密登录** - 适用于有 SSH 权限的服务器，使用标准 SSH 配置
+- **方案二：Python TCP Shell** - 适用于无 SSH 权限或 SSH 端口被限制的服务器，使用 Python 脚本实现
 
 ## 前置条件
 
@@ -15,7 +18,7 @@
    sudo tailscale up
    ```
 
-2. **Python 3.x**（用于 Python Shell 方案）
+2. **Python 3.x**（仅方案二需要）
 
 ## 方案一：SSH 免密登录
 
